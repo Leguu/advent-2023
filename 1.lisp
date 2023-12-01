@@ -45,13 +45,6 @@
                  (num (second values)))
                (setf (gethash (chars str) *words*) num))))
 
-(defun words-candidates (word)
-  (let* ((candidates (alexandria:hash-table-keys *words*))
-         (candidates (mapcar 'chars candidates)))
-    (remove-if-not (lambda (candidate)
-                     (alexandria:starts-with-subseq word candidate))
-                   candidates)))
-
 (defun chars (str)
   (coerce str 'list))
 
@@ -87,14 +80,6 @@
                  (push (digit-char (gethash containing-word *words*)) result)
                  (pop-until-not-a-word current-word))))
     (reverse result)))
-
-(defparameter *test-input* '("two1nine"
-                             "eightwothree"
-                             "abcone2threexyz"
-                             "xtwone3four"
-                             "4nineeightseven2"
-                             "zoneight234"
-                             "7pqrstsixteen"))
   
 
 (defun solution-part-two ()
