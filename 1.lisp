@@ -1,16 +1,3 @@
-1 cannot be coerced to a character.
-   [Condition of type SIMPLE-TYPE-ERROR]
-
-Restarts:
- 0: [RETRY] Retry SLY mREPL evaluation request.
- 1: [*ABORT] Return to SLY's top level.
- 2: [ABORT] abort thread (#<THREAD "sly-channel-1-mrepl-remote-1" RUNNING {1001A50133}>)
-
-Backtrace:
- 0: (SB-INT:SIMPLE-EVAL-IN-LEXENV (COERCE 1 (QUOTE CHARACTER)) #<NULL-LEXENV>)
- 1: (EVAL (COERCE 1 (QUOTE CHARACTER))
-     2: ((LAMBDA NIL :IN SLYNK-MREPL::MREPL-EVAL-1)
-         --more--))
 (defpackage #:advent-2023/1
   (:use #:cl)
   (:export :solution-part-one :solution-part-two))
