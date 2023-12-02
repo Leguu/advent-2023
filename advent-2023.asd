@@ -7,5 +7,5 @@
                                    *files*))
 
 (asdf:defsystem "advent-2023"
-  :depends-on (:arrow-macros :f-underscore :cl-ppcre)
+  :depends-on (:cl-ppcre :alexandria)
   :components #.*components*)
