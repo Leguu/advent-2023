@@ -1,5 +1,5 @@
 (defpackage #:advent-2023/1
-  (:use #:cl)
+  (:use #:cl #:alexandria)
   (:export :solution-part-one :solution-part-two))
 
 (in-package #:advent-2023/1)
